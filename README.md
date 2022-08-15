@@ -1,4 +1,4 @@
-# ElixirReleasePlease
+# ElixirReleasePlease!
 
 To start your Phoenix server:
 
