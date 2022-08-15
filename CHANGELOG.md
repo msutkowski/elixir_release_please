@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/msutkowski/elixir_release_please/compare/v1.1.0...v1.2.0) (2022-08-15)
+
+
+### Features
+
+* less excitement ([9f845bd](https://github.com/msutkowski/elixir_release_please/commit/9f845bdb5ab60ec8e28d24b6a973ba06bfdb4cde))
+
+
+### Bug Fixes
+
+* added excitement to the README ([6f92ffb](https://github.com/msutkowski/elixir_release_please/commit/6f92ffb114fdc14d0c57b14bf1dfb8fe3c0c0495))
+
 ## [1.1.0](https://github.com/msutkowski/elixir_release_please/compare/v1.0.0...v1.1.0) (2022-08-15)
 
 
