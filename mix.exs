@@ -4,7 +4,7 @@ defmodule ElixirReleasePlease.MixProject do
   def project do
     [
       app: :elixir_release_please,
-      version: "1.1.0",
+      version: "1.2.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:gettext] ++ Mix.compilers(),
