@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/msutkowski/elixir_release_please/compare/v1.2.0...v1.2.1) (2022-09-02)
+
+
+### Bug Fixes
+
+* README ([805eeba](https://github.com/msutkowski/elixir_release_please/commit/805eebadf612cb5ae46c27c093034c18fecdfc2f))
+
 ## [1.2.0](https://github.com/msutkowski/elixir_release_please/compare/v1.1.0...v1.2.0) (2022-08-15)
 
 
