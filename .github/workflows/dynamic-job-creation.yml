@@ -1,0 +1,35 @@
+name: This is a good time
+
+on:
+  workflow_dispatch:
+    inputs:
+      trigger-job:
+        description: 'Trigger job with value 2 to create the "this-is-so-fun" job'
+        required: true
+        default: 1
+        type: number
+
+jobs:
+  check-input:
+    runs-on: ubuntu-latest
+    outputs:
+      create-job: ${{ steps.set-output.outputs.create-job }}
+
+    steps:
+      - name: Check Input Value
+        id: check-input
+        run: |
+          if [ "${{ github.event.inputs.trigger-job }}" -eq 2 ]; then
+            echo "::set-output name=create-job::true"
+          else
+            echo "::set-output name=create-job::false"
+          fi
+
+  this-is-so-fun:
+    runs-on: ubuntu-latest
+    needs: check-input
+    if: ${{ needs.check-input.outputs.create-job == 'true' }}
+
+    steps:
+      - name: Print Success Message
+        run: echo "This job is so fun!"
