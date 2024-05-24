@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/msutkowski/elixir_release_please/compare/v1.2.0...v1.3.0) (2024-05-24)
+
+
+### Features
+
+* new feature ([a3794c8](https://github.com/msutkowski/elixir_release_please/commit/a3794c8a2a5f17196e8af2a87c4c02808fb18d98))
+
+
+### Bug Fixes
+
+* README ([805eeba](https://github.com/msutkowski/elixir_release_please/commit/805eebadf612cb5ae46c27c093034c18fecdfc2f))
+
 ## [1.2.0](https://github.com/msutkowski/elixir_release_please/compare/v1.1.0...v1.2.0) (2022-08-15)
 
 
