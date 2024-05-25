@@ -14,5 +14,5 @@ jobs:
           curl -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/actions/workflows/dynamic_job.yml/dispatches \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/conditional-job.yml/dispatches \
             -d '{"ref":"main", "inputs": {"pr_number": "${{ github.event.pull_request.number }}"}}'
