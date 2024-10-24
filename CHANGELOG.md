@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/msutkowski/elixir_release_please/compare/v1.3.0...v1.3.1) (2024-10-24)
+
+
+### Bug Fixes
+
+* readme ([8bd54ed](https://github.com/msutkowski/elixir_release_please/commit/8bd54edbee83b605e54ee80b827ca0bf91c57f46))
+
 ## [1.3.0](https://github.com/msutkowski/elixir_release_please/compare/v1.2.0...v1.3.0) (2024-10-24)
 
 
