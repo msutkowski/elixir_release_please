@@ -20,11 +20,13 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 ## Usage
 
-```yaml
-  - name: Fake job
 <!-- {x-release-please-start-version} -->
-    uses: misc-test-thing@v1.1.2
-<!-- {x-release-please-end} -->
-    with:
-        github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+
+```yaml
+- name: Fake job
+  uses: misc-test-thing@v1.1.2
+  with:
+    github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 ```
+
+<!-- {x-release-please-end} -->
