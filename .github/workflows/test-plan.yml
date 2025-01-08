@@ -22,7 +22,6 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const { number: prNumber, head_sha } = context.payload.pull_request;
-            const { GITHUB_TOKEN } = process.env;
 
             // Get the previous release
             const previousRelease = await github.rest.repos.getLatestRelease({
