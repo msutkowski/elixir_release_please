@@ -21,14 +21,17 @@ jobs:
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           script: |
             const { owner, repo } = context.repo;
-            const { number: prNumber, head_sha } = context.payload.pull_request;
+            const { number: prNumber } = context.payload.pull_request;
 
             // Get the previous release
             const previousRelease = await github.rest.repos.getLatestRelease({
               owner,
               repo
             });
-            console.log(previousRelease);
+            if (!previousRelease?.data) {
+              console.log('No previous release found');
+              return;
+            }
             const previousReleaseTag = previousRelease.data.tag_name;
             const publishedAt = previousRelease.data.published_at;
             // Get all PRs since the previous release
@@ -50,7 +53,6 @@ jobs:
             }
             const prsSinceRelease = prsSinceReleaseResponse.data.items;
             const testPlans = prsSinceRelease.filter(pr => pr.body).map(pr => ({ pr, testPlan: parseTestPlan(pr.body).join('\n') }));
-            console.log(testPlans);
             const testPlanComment = `
             # Test Plan
             ${testPlans.map(testPlan => `## ${testPlan.pr.title} ([#${testPlan.pr.number}](${testPlan.pr.html_url})) @${testPlan.pr.user.login}\n${testPlan.testPlan}\n\n`).join('\n')}
