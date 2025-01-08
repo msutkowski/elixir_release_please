@@ -52,7 +52,22 @@ jobs:
               return testPlans;
             }
             const prsSinceRelease = prsSinceReleaseResponse.data.items;
-            const testPlans = prsSinceRelease.filter(pr => pr.body).map(pr => ({ pr, testPlan: parseTestPlan(pr.body).join('\n') }));
+            const testPlans =
+              prsSinceRelease
+                .filter(pr => pr.body)
+                .map(pr => {
+                  const testPlan = parseTestPlan(pr.body);
+                  return {
+                    pr,
+                    testPlan: testPlan.join('\n'),
+                    testPlanCount: testPlan.length,
+                  };
+                })
+                .filter(testPlan => testPlan.testPlanCount > 0);
+            if (testPlans.length === 0) {
+              console.log('No test plans found');
+              return;
+            }
             const testPlanComment = `
             # Test Plan
             ${testPlans.map(testPlan => `## ${testPlan.pr.title} ([#${testPlan.pr.number}](${testPlan.pr.html_url})) @${testPlan.pr.user.login}\n${testPlan.testPlan}\n\n`).join('\n')}
