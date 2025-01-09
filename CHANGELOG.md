@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.2](https://github.com/msutkowski/elixir_release_please/compare/v1.3.1...v1.3.2) (2025-01-09)
+
+
+### Bug Fixes
+
+* Update README.md ([d991979](https://github.com/msutkowski/elixir_release_please/commit/d991979f745e67e11c1d7258ce131ffe049e0750))
+* Update README.md ([df98202](https://github.com/msutkowski/elixir_release_please/commit/df98202f8cab8bb9a019e154fb5df9250b103e38))
+* Update README.md ([#12](https://github.com/msutkowski/elixir_release_please/issues/12)) ([e00e32e](https://github.com/msutkowski/elixir_release_please/commit/e00e32e1d8217d77a00d3d5ca9106103df2f9963))
+* Update README.md ([#15](https://github.com/msutkowski/elixir_release_please/issues/15)) ([2b0791b](https://github.com/msutkowski/elixir_release_please/commit/2b0791bed371716dfbeadb0daf144493b29ceff5))
+
 ## [1.3.1](https://github.com/msutkowski/elixir_release_please/compare/v1.3.0...v1.3.1) (2024-10-24)
 
 
